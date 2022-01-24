@@ -1,5 +1,5 @@
 /* -------------------- FONT --------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 /* ---------------- CODE COULEUR ----------------- */
 
@@ -7,6 +7,8 @@
 .color-starbucks-landing-page-1-hex { color: #222222; }
 .color-starbucks-landing-page-2-hex { color: #2E6F47; }
 .color-starbucks-landing-page-3-hex { color: #FAFFFA; }
+.color-starbucks-landing-page-3-hex { color: #EB7495; }
+.color-starbucks-landing-page-3-hex { color: #D752B1; }
 
 /* ==================== BODY ===================== */
 
@@ -15,12 +17,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* va prendre en compte le padding, les bordures etc... dans le calcule des largeurs et des hauteurs (ne fera pas +) */
-    scroll-behavior: smooth; /* va définir la façon de scroller */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FAFFFA;
+}
+
+/* =================== CERCLE ==================== */
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2E6F47;
+    clip-path: circle(600px at right 800px);
 }
 
 /* =================== HEADER ==================== */
@@ -85,11 +98,98 @@ header ul li a {
 
 .content-title-text-image .text-box h2 {
     color: #222222;
-    font-size: 4rem;
-    line-height: 1.3em; /* pourquoi "rem" ne fonctionne pas sur line-height ? */
+    font-size: 4em;
+    line-height: 4.4rem;
     font-weight: 600;
 }
 
 .content-title-text-image .text-box h2 span {
-    font-weight: 900;
+    font-weight: 800;
+    font-size: 4.4rem;
+    color: #2E6F47;
+}
+
+.content-title-text-image .text-box p {
+    color: #222222;
+}
+
+.content-title-text-image .text-box a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #2E6F47;
+    color: #FAFFFA;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content-title-text-image .image-box {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content-title-text-image .image-box img {
+    max-width: 400px;
+}
+
+/* =================== SLIDER ==================== */
+
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 60px;
+}
+
+/* =============== RÉSEAUX SOCIAUX =============== */
+
+.reseaux-sociaux {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reseaux-sociaux li {
+    list-style: none;
+}
+
+.reseaux-sociaux li i {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    cursor: pointer;
+    font-size: 3rem;
+    transition: 0.5s;
+    color: #FAFFFA;
+}
+
+.reseaux-sociaux li i:hover {
+    transform: translateY(-5px);
 }

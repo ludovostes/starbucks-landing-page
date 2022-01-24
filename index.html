@@ -19,6 +19,9 @@
 <body>
 <!--LANDING PAGE "ACCUEIL"-->
     <section class="section-accueil">
+        <!--CERCLE-->
+            <div class="circle"></div>
+        <!--HEADER-->
             <header>
                 <a href="#"><img src="image/logo.png" class="logo" alt="logo Starbuck"></a>
                 <ul>
@@ -45,10 +48,30 @@
                     <img src="image/img1.png" class="image-milkshake" alt="milkshake green Starbuck">
                 </div>
             </div>
-            
+        <!--SLIDER-->
+            <ul class="thumb">
+                <li><img src="image/thumb1.png" onclick="imgSlider('image/img1.png');changeCircleColor('#2E6F47')"></li>
+                <li><img src="image/thumb2.png" onclick="imgSlider('image/img2.png');changeCircleColor('#EB7495')"></li>
+                <li><img src="image/thumb3.png" onclick="imgSlider('image/img3.png');changeCircleColor('#D752B1')"></li>
+            </ul>
+         <!--RÉSEAUX SOCIAUX-->
+            <ul class="reseaux-sociaux">
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+            </ul>
     </section>
 <!--SCRIPT JS-->
-    <script src="app.js"></script>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.image-milkshake').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
 </body>
 
 </html>
