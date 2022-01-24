@@ -1,0 +1,95 @@
+/* -------------------- FONT --------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ---------------- CODE COULEUR ----------------- */
+
+/* Color in Hex via Coolors.co */
+.color-starbucks-landing-page-1-hex { color: #222222; }
+.color-starbucks-landing-page-2-hex { color: #2E6F47; }
+.color-starbucks-landing-page-3-hex { color: #FAFFFA; }
+
+/* ==================== BODY ===================== */
+
+/* on modifie le style du body (par défaut) */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* va prendre en compte le padding, les bordures etc... dans le calcule des largeurs et des hauteurs (ne fera pas +) */
+    scroll-behavior: smooth; /* va définir la façon de scroller */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFFFA;
+}
+
+/* =================== HEADER ==================== */
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #222222;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+/* ============ TITRE + TEXTE + IMAGE ============ */
+
+.content-title-text-image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-title-text-image .text-box {
+    position: relative;
+    max-width: 800px;
+}
+
+.content-title-text-image .text-box h2 {
+    color: #222222;
+    font-size: 4rem;
+    line-height: 1.3em; /* pourquoi "rem" ne fonctionne pas sur line-height ? */
+    font-weight: 600;
+}
+
+.content-title-text-image .text-box h2 span {
+    font-weight: 900;
+}
